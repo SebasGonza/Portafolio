@@ -7,8 +7,9 @@
             <a data-page="home">Home</a>
             <a data-page="about-me">Sobre mi</a>
             <a data-page="habilities">Habilidades</a>
-            <a data-page="expirience">Experiencia</a>
+            <a data-page="experience">Experiencia</a>
             <a data-page="contact-me">Contactame</a>
+            <div class="indicator"></div>
         </div>
     </div>
 </template>
@@ -21,10 +22,19 @@ body {
     background: var(--color-background);
 }
 
+.indicator{
+
+    position: absolute;
+    z-index: -5;
+    background: linear-gradient(90deg, rgba(216,235,220,1) 0%, rgba(155,244,163,1) 13%, rgba(135,207,141,1) 34%, rgba(93,153,98,1) 95%);
+    top: 15px;
+
+}
+
 .navbar {
     position: fixed;
     font-family: 'Montserrat', sans-serif;
-    width: 95vw;
+    width: 100%;
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
@@ -38,7 +48,6 @@ body {
 
 .opciones {
     width: 33vw;
-    /* border: white solid; */
     display: flex;
     flex-direction: row;
     column-gap: 10%;
@@ -46,9 +55,10 @@ body {
 
 }
 
-.opciones div:hover {
+.opciones   a:hover {
     cursor: pointer;
-    color: #88EB90;
+    background-color: none;
+    /* color: #88EB90; */
 
 }
 </style>
