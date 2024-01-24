@@ -4,11 +4,11 @@
             Sebastian;
         </div>
         <div class="opciones">
-            <a data-page="home">Home</a>
-            <a data-page="about-me">Sobre mi</a>
-            <a data-page="habilities">Habilidades</a>
-            <a data-page="experience">Experiencia</a>
-            <a data-page="contact-me">Contactame</a>
+            <a href=".home" class="opcion" data-page="home">Home</a>
+            <a class="about-me" data-page="about-me">Sobre mi</a>
+            <a class="opcion" data-page="habilities">Habilidades</a>
+            <a class="opcion" data-page="experience">Experiencia</a>
+            <a class="opcion" data-page="contact-me">Contactame</a>
             <div class="indicator"></div>
         </div>
     </div>
@@ -22,12 +22,17 @@ body {
     background: var(--color-background);
 }
 
+.opcion{
+    margin-right: 12px
+}
 .indicator{
 
     position: absolute;
     z-index: -5;
-    background: linear-gradient(90deg, rgba(216,235,220,1) 0%, rgba(155,244,163,1) 13%, rgba(135,207,141,1) 34%, rgba(93,153,98,1) 95%);
+    background:  rgba(93,153,98,1);
     top: 15px;
+    height: 2px;
+    margin-top: 3px;
 
 }
 
@@ -50,7 +55,7 @@ body {
     width: 33vw;
     display: flex;
     flex-direction: row;
-    column-gap: 10%;
+    column-gap: 4%;
     font-size: 1rem;
 
 }
