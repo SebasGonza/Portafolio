@@ -4,11 +4,11 @@
             Sebastian;
         </div>
         <div class="opciones">
-            <a href=".home" class="opcion" data-page="home">Home</a>
-            <a class="about-me" data-page="about-me">Sobre mi</a>
-            <a class="opcion" data-page="habilities">Habilidades</a>
-            <a class="opcion" data-page="experience">Experiencia</a>
-            <a class="opcion" data-page="contact-me">Contactame</a>
+            <a href="#home" class="opcion" data-page="home">Home</a>
+            <a href="#about-me" class="opcion" data-page="about-me">Sobre mi</a>
+            <a href="#habilities" class="opcion" data-page="habilities">Habilidades</a>
+            <a href="#experience" class="opcion" data-page="experience">Experiencia</a>
+            <a href="#contact" class="opcion" data-page="contact-me">Contactame</a>
             <div class="indicator"></div>
         </div>
     </div>
@@ -66,4 +66,17 @@ body {
     /* color: #88EB90; */
 
 }
+
+@media screen and (min-width: 1326px) and (max-width: 1440px){
+
+    .opciones{
+        display: flex;
+        width: 50vw;
+        column-gap: 2%;
+    }
+
+    
+}
+
+
 </style>

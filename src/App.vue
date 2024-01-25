@@ -66,24 +66,24 @@ onMounted(() => {
   </header>
 
   <main>
-    <section data-index="0" class="home">
+    <section id="home" data-index="0" class="home">
       <!-- <PresentationComponent></PresentationComponent> -->
       HOME
     </section>
 
-    <section data-index="1" class="about-me">
+    <section id="about-me"  data-index="1" class="about-me">
       ABOUT ME
     </section>
 
-    <section data-index="2" class="habilities">
+    <section id="habilities"  data-index="2" class="habilities">
       HABILITIES
     </section>
 
-    <section data-index="3" class="experience">
+    <section id="experience"  data-index="3" class="experience">
       EXPERIENCE
     </section>
 
-    <section data-index="4" class="contact-me">
+    <section id="contact"  data-index="4" class="contact-me">
       CONTACT-ME
     </section>
 
