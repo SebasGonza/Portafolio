@@ -4,11 +4,12 @@
             Sebastian;
         </div>
         <div class="opciones">
-            <a data-page="home">Home</a>
-            <a data-page="about-me">Sobre mi</a>
-            <a data-page="habilities">Habilidades</a>
-            <a data-page="expirience">Experiencia</a>
-            <a data-page="contact-me">Contactame</a>
+            <a href=".home" class="opcion" data-page="home">Home</a>
+            <a class="about-me" data-page="about-me">Sobre mi</a>
+            <a class="opcion" data-page="habilities">Habilidades</a>
+            <a class="opcion" data-page="experience">Experiencia</a>
+            <a class="opcion" data-page="contact-me">Contactame</a>
+            <div class="indicator"></div>
         </div>
     </div>
 </template>
@@ -21,10 +22,24 @@ body {
     background: var(--color-background);
 }
 
+.opcion{
+    margin-right: 12px
+}
+.indicator{
+
+    position: absolute;
+    z-index: -5;
+    background:  rgba(93,153,98,1);
+    top: 15px;
+    height: 2px;
+    margin-top: 3px;
+
+}
+
 .navbar {
     position: fixed;
     font-family: 'Montserrat', sans-serif;
-    width: 95vw;
+    width: 100%;
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
@@ -38,17 +53,17 @@ body {
 
 .opciones {
     width: 33vw;
-    /* border: white solid; */
     display: flex;
     flex-direction: row;
-    column-gap: 10%;
+    column-gap: 4%;
     font-size: 1rem;
 
 }
 
-.opciones div:hover {
+.opciones   a:hover {
     cursor: pointer;
-    color: #88EB90;
+    background-color: none;
+    /* color: #88EB90; */
 
 }
 </style>

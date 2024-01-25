@@ -6,6 +6,7 @@ import EncabezadoHeader from './components/EncabezadoHeader.vue';
 onMounted(() => {
 
   const secciones = document.querySelectorAll("Section") as NodeListOf<HTMLElement>;
+  const indicador =  document.querySelector(".indicator") as HTMLElement | null;
 
   console.log(secciones);
 
@@ -13,12 +14,39 @@ onMounted(() => {
     threshold: 0.7
   };
 
+
   function navcheck(entradas: IntersectionObserverEntry[]) {
     entradas.forEach((entrada) => {
       const nombreClase: String = entrada.target.className;
       const seccionActiva: HTMLElement | null = document.querySelector(`[data-page=${nombreClase}]`);
-      const index = entrada.target.getAttribute('data-index');
+      const coords = seccionActiva!.getBoundingClientRect();
+      // const index = entrada.target.getAttribute('data-index');
 
+      const directs = {
+        height : coords?.height,
+        width : coords?.width,
+        top: coords?.top,
+        left : coords?.left - 30,
+        right : coords?.right,
+      };
+
+      if (entrada.isIntersecting) {
+        console.log(seccionActiva);
+        // console.log(indicador);
+        indicador?.style.setProperty(
+          'left', `${directs.left}px`
+        );
+        indicador?.style.setProperty(
+          'right', `${directs.right}px`
+        );
+        indicador?.style.setProperty(
+          'top', `${directs.top}px`
+        );
+        indicador?.style.setProperty(
+          'width', `${directs.width}px`
+        );
+      
+      }
 
     })
   };
