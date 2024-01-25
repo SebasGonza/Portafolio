@@ -4,8 +4,8 @@
             Sebastian;
         </div>
         <div class="opciones">
-            <a href=".home" class="opcion" data-page="home">Home</a>
-            <a class="about-me" data-page="about-me">Sobre mi</a>
+            <a @click="navigationSection('home')" class="opcion" data-page="home">Home</a>
+            <a class="opcion" data-page="about-me">Sobre mi</a>
             <a class="opcion" data-page="habilities">Habilidades</a>
             <a class="opcion" data-page="experience">Experiencia</a>
             <a class="opcion" data-page="contact-me">Contactame</a>
@@ -22,14 +22,15 @@ body {
     background: var(--color-background);
 }
 
-.opcion{
+.opcion {
     margin-right: 12px
 }
-.indicator{
+
+.indicator {
 
     position: absolute;
     z-index: -5;
-    background:  rgba(93,153,98,1);
+    background: rgba(93, 153, 98, 1);
     top: 15px;
     height: 2px;
     margin-top: 3px;
@@ -60,10 +61,32 @@ body {
 
 }
 
-.opciones   a:hover {
+.opciones a:hover {
     cursor: pointer;
     background-color: none;
     /* color: #88EB90; */
 
 }
+
+@media screen and (min-width: 1326px) and (max-width: 1440px) {
+
+    .opciones {
+        display: flex;
+        width: 50vw;
+        column-gap: 2%;
+    }
+
+
+}
 </style>
+
+<script setup lang="ts">
+
+
+const emit = defineEmits(['navigation']);
+
+function navigationSection(seccion: string): any {
+    emit('navigation', seccion);
+}
+
+</script>

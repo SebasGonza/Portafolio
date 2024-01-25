@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import EncabezadoHeader from './components/EncabezadoHeader.vue';
 // import PresentationComponent from './components/PresentationComponent.vue';
+
+
+
 
 onMounted(() => {
 
   const secciones = document.querySelectorAll("Section") as NodeListOf<HTMLElement>;
-  const indicador =  document.querySelector(".indicator") as HTMLElement | null;
+  const indicador = document.querySelector(".indicator") as HTMLElement | null;
 
   console.log(secciones);
 
@@ -23,11 +26,11 @@ onMounted(() => {
       // const index = entrada.target.getAttribute('data-index');
 
       const directs = {
-        height : coords?.height,
-        width : coords?.width,
+        height: coords?.height,
+        width: coords?.width,
         top: coords?.top,
-        left : coords?.left - 30,
-        right : coords?.right,
+        left: coords?.left - 30,
+        right: coords?.right,
       };
 
       if (entrada.isIntersecting) {
@@ -45,7 +48,7 @@ onMounted(() => {
         indicador?.style.setProperty(
           'width', `${directs.width}px`
         );
-      
+
       }
 
     })
@@ -66,24 +69,24 @@ onMounted(() => {
   </header>
 
   <main>
-    <section data-index="0" class="home">
+    <section ref="home" id="home" data-index="0" class="home">
       <!-- <PresentationComponent></PresentationComponent> -->
       HOME
     </section>
 
-    <section data-index="1" class="about-me">
+    <section ref="about-me" id="" data-index="1" class="about-me">
       ABOUT ME
     </section>
 
-    <section data-index="2" class="habilities">
+    <section ref="habilities" data-index="2" class="habilities">
       HABILITIES
     </section>
 
-    <section data-index="3" class="experience">
+    <section ref="experience" data-index="3" class="experience">
       EXPERIENCE
     </section>
 
-    <section data-index="4" class="contact-me">
+    <section ref="contact" data-index="4" class="contact-me">
       CONTACT-ME
     </section>
 
