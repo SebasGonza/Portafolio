@@ -4,11 +4,11 @@
             Sebastian;
         </div>
         <div class="opciones">
-            <a @click="navigationSection('home')" class="opcion" data-page="home">Home</a>
-            <a class="opcion" data-page="about-me">Sobre mi</a>
-            <a class="opcion" data-page="habilities">Habilidades</a>
-            <a class="opcion" data-page="experience">Experiencia</a>
-            <a class="opcion" data-page="contact-me">Contactame</a>
+            <a @click="toScrollPage('home')" class="opcion" data-page="home">Home</a>
+            <a @click="toScrollPage('about-me')" class="opcion" data-page="about-me">Sobre mi</a>
+            <a @click="toScrollPage('habilities')" class="opcion" data-page="habilities">Habilidades</a>
+            <a @click="toScrollPage('experience')" class="opcion" data-page="experience">Experiencia</a>
+            <a @click="toScrollPage('contact-me')" class="opcion" data-page="contact-me">Contactame</a>
             <div class="indicator"></div>
         </div>
     </div>
@@ -43,7 +43,7 @@ body {
     width: 100%;
     margin-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .logo {
@@ -82,11 +82,7 @@ body {
 
 <script setup lang="ts">
 
-
-const emit = defineEmits(['navigation']);
-
-function navigationSection(seccion: string): any {
-    emit('navigation', seccion);
+function toScrollPage(a: string): void {
+    document.querySelector(`.${a}`)?.scrollIntoView({ behavior: "smooth"});
 }
-
 </script>

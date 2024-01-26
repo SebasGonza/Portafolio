@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted } from 'vue';
 import EncabezadoHeader from './components/EncabezadoHeader.vue';
-// import PresentationComponent from './components/PresentationComponent.vue';
 
 
 
@@ -34,7 +33,7 @@ onMounted(() => {
       };
 
       if (entrada.isIntersecting) {
-        console.log(seccionActiva);
+        // console.log(seccionActiva);
         // console.log(indicador);
         indicador?.style.setProperty(
           'left', `${directs.left}px`
@@ -70,11 +69,10 @@ onMounted(() => {
 
   <main>
     <section ref="home" id="home" data-index="0" class="home">
-      <!-- <PresentationComponent></PresentationComponent> -->
       HOME
     </section>
 
-    <section ref="about-me" id="" data-index="1" class="about-me">
+    <section ref="about-me"  data-index="1" class="about-me">
       ABOUT ME
     </section>
 
