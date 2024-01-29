@@ -5,7 +5,5 @@
 
 
 <style scoped>
-*{
-    
-}
+
 </style>

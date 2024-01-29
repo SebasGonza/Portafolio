@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import EncabezadoHeader from './components/EncabezadoHeader.vue';
+import HomeView from './components/HomeView.vue';
 
 
 
@@ -27,8 +28,8 @@ onMounted(() => {
       const directs = {
         height: coords?.height,
         width: coords?.width,
-        top: coords?.top,
-        left: coords?.left - 30,
+        top: coords?.top + 30,
+        left: coords?.left,
         right: coords?.right,
       };
 
@@ -69,10 +70,10 @@ onMounted(() => {
 
   <main>
     <section ref="home" id="home" data-index="0" class="home">
-      HOME
+      <HomeView></HomeView>
     </section>
 
-    <section ref="about-me"  data-index="1" class="about-me">
+    <section ref="about-me" data-index="1" class="about-me">
       ABOUT ME
     </section>
 
@@ -97,8 +98,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
-
 
 @media (min-width: 1024px) {
   /* header {

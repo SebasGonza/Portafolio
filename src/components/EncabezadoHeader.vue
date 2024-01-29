@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <div class="logo">
-            Sebastian;
+            Sebastian
         </div>
         <div class="opciones">
             <a @click="toScrollPage('home')" class="opcion" data-page="home">Home</a>
@@ -18,32 +18,36 @@
 @import '../assets/base.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap');
 
-body {
-    background: var(--color-background);
+.opcion {
+    margin-right: 12px;
+    font-size: 1rem;
 }
 
-.opcion {
-    margin-right: 12px
+.logo::before {
+    content: "<";
+}
+
+.logo::after {
+    content: "/>";
 }
 
 .indicator {
-
     position: absolute;
     z-index: -5;
     background: rgba(93, 153, 98, 1);
-    top: 15px;
     height: 2px;
-    margin-top: 3px;
 
 }
 
 .navbar {
+    background-color: #191919;
     position: fixed;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    margin-top: 20px;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px
 }
 
 .logo {
@@ -64,6 +68,7 @@ body {
 .opciones a:hover {
     cursor: pointer;
     background-color: none;
+    color: none;
     /* color: #88EB90; */
 
 }
@@ -83,6 +88,6 @@ body {
 <script setup lang="ts">
 
 function toScrollPage(a: string): void {
-    document.querySelector(`.${a}`)?.scrollIntoView({ behavior: "smooth"});
+    document.querySelector(`.${a}`)?.scrollIntoView({ behavior: "smooth" });
 }
 </script>
