@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import EncabezadoHeader from './components/EncabezadoHeader.vue';
-// import PresentationComponent from './components/PresentationComponent.vue';
+import HomeView from './components/HomeView.vue';
+
+
+
 
 onMounted(() => {
 
   const secciones = document.querySelectorAll("Section") as NodeListOf<HTMLElement>;
-  const indicador =  document.querySelector(".indicator") as HTMLElement | null;
+  const indicador = document.querySelector(".indicator") as HTMLElement | null;
 
   console.log(secciones);
 
@@ -23,15 +26,15 @@ onMounted(() => {
       // const index = entrada.target.getAttribute('data-index');
 
       const directs = {
-        height : coords?.height,
-        width : coords?.width,
-        top: coords?.top,
-        left : coords?.left - 30,
-        right : coords?.right,
+        height: coords?.height,
+        width: coords?.width,
+        top: coords?.top + 30,
+        left: coords?.left,
+        right: coords?.right,
       };
 
       if (entrada.isIntersecting) {
-        console.log(seccionActiva);
+        // console.log(seccionActiva);
         // console.log(indicador);
         indicador?.style.setProperty(
           'left', `${directs.left}px`
@@ -45,7 +48,7 @@ onMounted(() => {
         indicador?.style.setProperty(
           'width', `${directs.width}px`
         );
-      
+
       }
 
     })
@@ -66,24 +69,23 @@ onMounted(() => {
   </header>
 
   <main>
-    <section id="home" data-index="0" class="home">
-      <!-- <PresentationComponent></PresentationComponent> -->
-      HOME
+    <section ref="home" id="home" data-index="0" class="home">
+      <HomeView></HomeView>
     </section>
 
-    <section id="about-me"  data-index="1" class="about-me">
+    <section ref="about-me" data-index="1" class="about-me">
       ABOUT ME
     </section>
 
-    <section id="habilities"  data-index="2" class="habilities">
+    <section ref="habilities" data-index="2" class="habilities">
       HABILITIES
     </section>
 
-    <section id="experience"  data-index="3" class="experience">
+    <section ref="experience" data-index="3" class="experience">
       EXPERIENCE
     </section>
 
-    <section id="contact"  data-index="4" class="contact-me">
+    <section ref="contact" data-index="4" class="contact-me">
       CONTACT-ME
     </section>
 
@@ -96,8 +98,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
-
 
 @media (min-width: 1024px) {
   /* header {

@@ -1,14 +1,15 @@
 <template>
     <div class="navbar">
         <div class="logo">
-            Sebastian;
+            Sebastian
         </div>
         <div class="opciones">
-            <a href="#home" class="opcion" data-page="home">Home</a>
-            <a href="#about-me" class="opcion" data-page="about-me">Sobre mi</a>
-            <a href="#habilities" class="opcion" data-page="habilities">Habilidades</a>
-            <a href="#experience" class="opcion" data-page="experience">Experiencia</a>
-            <a href="#contact" class="opcion" data-page="contact-me">Contactame</a>
+            <a @click="toScrollPage('home')" class="opcion" data-page="home">Home</a>
+            <a @click="toScrollPage('about-me')" class="opcion" data-page="about-me">Sobre mi</a>
+            <a @click="toScrollPage('habilities')" class="opcion" data-page="habilities">Habilidades</a>
+            <a @click="toScrollPage('experience')" class="opcion" data-page="experience">Experiencia</a>
+            <a @click="toScrollPage('contact-me')" class="opcion" data-page="contact-me">Contactame</a>
+
             <div class="indicator"></div>
         </div>
     </div>
@@ -18,31 +19,36 @@
 @import '../assets/base.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap');
 
-body {
-    background: var(--color-background);
+.opcion {
+    margin-right: 12px;
+    font-size: 1rem;
 }
 
-.opcion{
-    margin-right: 12px
+.logo::before {
+    content: "<";
 }
-.indicator{
 
+.logo::after {
+    content: "/>";
+}
+
+.indicator {
     position: absolute;
     z-index: -5;
-    background:  rgba(93,153,98,1);
-    top: 15px;
+    background: rgba(93, 153, 98, 1);
     height: 2px;
-    margin-top: 3px;
 
 }
 
 .navbar {
+    background-color: #191919;
     position: fixed;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    margin-top: 20px;
+    padding: 20px 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px
 }
 
 .logo {
@@ -60,23 +66,31 @@ body {
 
 }
 
-.opciones   a:hover {
+.opciones a:hover {
     cursor: pointer;
     background-color: none;
+    color: none;
     /* color: #88EB90; */
 
 }
 
-@media screen and (min-width: 1326px) and (max-width: 1440px){
+@media screen and (min-width: 1326px) and (max-width: 1440px) {
 
-    .opciones{
+    .opciones {
+
         display: flex;
         width: 50vw;
         column-gap: 2%;
     }
 
-    
+
 }
-
-
 </style>
+
+<script setup lang="ts">
+
+function toScrollPage(a: string): void {
+    document.querySelector(`.${a}`)?.scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
