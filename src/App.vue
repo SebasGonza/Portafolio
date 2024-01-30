@@ -11,7 +11,6 @@ onMounted(() => {
   const secciones = document.querySelectorAll("Section") as NodeListOf<HTMLElement>;
   const indicador = document.querySelector(".indicator") as HTMLElement | null;
 
-  console.log(secciones);
 
   const options: IntersectionObserverInit = {
     threshold: 0.7

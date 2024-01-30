@@ -42,13 +42,13 @@
         <span class="nombre">
             Sebastian Gonzalez Romero
         </span>
-        <span class="predicado">& Soy Full Stack Developer</span>
+        <span class="predicado">& Soy Front-end Developer</span>
 
         <div class="botones">
             <a class="boton boton-principal" href="https://www.linkedin.com/in/sebastian-gonzalez-romero-5b4aa91b9/">
-                Mi perfil de linkend
+                Mi perfil de linkedIn
             </a>
-            <a class="boton boton-secundario" @click="console.log('holi');">
+            <a class="boton boton-secundario" @click="showCV">
                 Ver mi CV
             </a>
         </div>
@@ -153,6 +153,7 @@
     width: 45%;
     border: solid hsla(160, 100%, 37%, 1) 1px;
     border-radius: 3px;
+    cursor: pointer;
 
 }
 
@@ -164,6 +165,15 @@
 .boton-secundario {
     margin-left: 50px;
     background-color:var(--vt-c-black);
+}
+
+.boton-secundario:hover {
+    background-color: hsla(160, 100%, 37%, 1);
+    color: white;
+}
+.boton-principal:hover {
+    background-color: var(--vt-c-black);
+    color: hsla(160, 100%, 37%, 1);
 }
 
 .predicado {
@@ -184,3 +194,11 @@
     }
 }
 </style>
+
+<script setup lang="ts">
+
+function showCV() {
+    console.log('Are u dumb stupid?');
+}
+
+</script>
