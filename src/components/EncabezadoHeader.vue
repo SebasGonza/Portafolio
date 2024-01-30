@@ -9,6 +9,7 @@
             <a @click="toScrollPage('habilities')" class="opcion" data-page="habilities">Habilidades</a>
             <a @click="toScrollPage('experience')" class="opcion" data-page="experience">Experiencia</a>
             <a @click="toScrollPage('contact-me')" class="opcion" data-page="contact-me">Contactame</a>
+
             <div class="indicator"></div>
         </div>
     </div>
@@ -76,6 +77,7 @@
 @media screen and (min-width: 1326px) and (max-width: 1440px) {
 
     .opciones {
+
         display: flex;
         width: 50vw;
         column-gap: 2%;
@@ -91,3 +93,4 @@ function toScrollPage(a: string): void {
     document.querySelector(`.${a}`)?.scrollIntoView({ behavior: "smooth" });
 }
 </script>
+
