@@ -4,13 +4,34 @@
             <img src="../assets/consola3.svg" height="100" />
         </div>
         <div class="consola1">
-            <img src="../assets/consola1.svg" />
+            <img src="../assets/consola1.svg" height="1000" />
         </div>
         <div class="consola2">
-            <img src="../assets/consola2.svg" />
+            <img src="../assets/consola2.svg" height="100" />
         </div>
 
-        <div class="bola1">
+        <div class="bola bola1">
+            <img src="../assets/bola1.svg" height="10" />
+        </div>
+        <div class="bola bola8">
+            <img src="../assets/bola3.svg" height="10" />
+        </div>
+        <div class="bola bola2">
+            <img src="../assets/bola1.svg" height="5" />
+        </div>
+        <div class="bola bola3">
+            <img src="../assets/bola1.svg" height="5" />
+        </div>
+        <div class="bola bola4">
+            <img src="../assets/bola1.svg" height="8" />
+        </div>
+        <div class="bola bola5">
+            <img src="../assets/bola2.svg" height="20" />
+        </div>
+        <div class="bola bola6">
+            <img src="../assets/bola2.svg" height="15" />
+        </div>
+        <div class="bola bola7">
             <img src="../assets/bola1.svg" height="10" />
         </div>
     </div>
@@ -23,10 +44,20 @@
         </span>
         <span class="predicado">& Soy Full Stack Developer</span>
 
+        <div class="botones">
+            <a class="boton boton-principal" href="https://www.linkedin.com/in/sebastian-gonzalez-romero-5b4aa91b9/">
+                Mi perfil de linkend
+            </a>
+            <a class="boton boton-secundario" @click="console.log('holi');">
+                Ver mi CV
+            </a>
+        </div>
+
     </div>
 </template>
 
 <style >
+@import '../assets/base.css';
 .consola3 {
     position: absolute;
     top: 5rem;
@@ -49,11 +80,44 @@
 
 }
 
-.bola1 {
+.bola {
     position: absolute;
+    z-index: -1;
+}
+
+.bola1 {
     top: 5rem;
     right: 2rem;
-    z-index: -1;
+}
+
+.bola3 {
+    top: 20rem;
+    right: 50rem;
+}
+
+.bola4 {
+    top: 7rem;
+    left: 50rem;
+}
+
+.bola5 {
+    top: 7rem;
+    left: 80rem;
+}
+
+.bola6 {
+    top: 15rem;
+    left: 10rem;
+}
+
+.bola7 {
+    bottom: 10rem;
+    right: 15rem;
+}
+
+.bola8 {
+    top: 20rem;
+    left: 40rem;
 }
 
 .nombre {
@@ -65,15 +129,44 @@
     white-space: nowrap;
     border-right: 4px solid;
     width: 460px;
-    animation: typing 1.5s steps(12), blink .5s infinite step-end alternate;
+    animation: typing 2s steps(25), blink .5s infinite step-end alternate;
     overflow: hidden;
 }
 
-.presentacion{
+.presentacion {
     margin-left: 30%;
+    width: 28%;
 }
 
-.predicado{
+.botones {
+    margin-top: 20px;
+    display: flex;
+    width: 456px;
+    height: 40px;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+    border: solid hsla(160, 100%, 37%, 1) 1px;
+    border-radius: 3px;
+
+}
+
+.boton-principal {
+    background-color: hsla(160, 100%, 37%, 1);
+    color: white;
+}
+
+.boton-secundario {
+    margin-left: 50px;
+    background-color:var(--vt-c-black);
+}
+
+.predicado {
     font-size: 2rem;
     font-family: Poppins, monospace;
     color: rgba(93, 153, 98, 1);
