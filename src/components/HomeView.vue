@@ -17,10 +17,11 @@
 
 
     <div class="presentacion">
-        <span>Hola mi nombre es:</span>
+        <p>Hola mi nombre es:</p>
         <span class="nombre">
             Sebastian Gonzalez Romero
         </span>
+        <span class="predicado">& Soy Full Stack Developer</span>
 
     </div>
 </template>
@@ -58,13 +59,24 @@
 .nombre {
     color: hsla(160, 100%, 37%, 1);
     display: block;
-    font-family: monospace;
+    font-family: Poppins, monospace;
+    font-weight: 600;
     font-size: 2rem;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 442px;
+    width: 460px;
     animation: typing 1.5s steps(12), blink .5s infinite step-end alternate;
     overflow: hidden;
+}
+
+.presentacion{
+    margin-left: 30%;
+}
+
+.predicado{
+    font-size: 2rem;
+    font-family: Poppins, monospace;
+    color: rgba(93, 153, 98, 1);
 }
 
 @keyframes typing {
