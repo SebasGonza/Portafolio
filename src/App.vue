@@ -100,6 +100,7 @@ section {
   z-index: -1;
 }
 
+
 @media (min-width: 1024px) {
   /* header {
     display: flex;

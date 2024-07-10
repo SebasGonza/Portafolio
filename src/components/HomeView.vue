@@ -56,8 +56,9 @@
     </div>
 </template>
 
-<style >
+<style>
 @import '../assets/base.css';
+
 .consola3 {
     position: absolute;
     top: 5rem;
@@ -83,6 +84,20 @@
 .bola {
     position: absolute;
     z-index: -1;
+    animation-name: movimientoBola;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movimientoBola {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
 }
 
 .bola1 {
@@ -164,13 +179,14 @@
 
 .boton-secundario {
     margin-left: 50px;
-    background-color:var(--vt-c-black);
+    background-color: var(--vt-c-black);
 }
 
 .boton-secundario:hover {
     background-color: hsla(160, 100%, 37%, 1);
     color: white;
 }
+
 .boton-principal:hover {
     background-color: var(--vt-c-black);
     color: hsla(160, 100%, 37%, 1);

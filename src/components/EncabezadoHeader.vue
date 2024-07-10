@@ -1,16 +1,19 @@
 <template>
-    <div class="navbar">
-        <div class="logo">
-            Sebastian
-        </div>
-        <div class="opciones">
-            <a @click="toScrollPage('home')" class="opcion" data-page="home">Home</a>
-            <a @click="toScrollPage('about-me')" class="opcion" data-page="about-me">Sobre mi</a>
-            <a @click="toScrollPage('habilities')" class="opcion" data-page="habilities">Habilidades</a>
-            <a @click="toScrollPage('experience')" class="opcion" data-page="experience">Experiencia</a>
-            <a @click="toScrollPage('contact-me')" class="opcion" data-page="contact-me">Contactame</a>
+    <div class="background">
 
-            <div class="indicator"></div>
+        <div class="navbar">
+            <div class="logo">
+                Sebastian
+            </div>
+            <div class="opciones">
+                <a @click="toScrollPage('home')" class="opcion" data-page="home">Home</a>
+                <a @click="toScrollPage('about-me')" class="opcion" data-page="about-me">Sobre mi</a>
+                <a @click="toScrollPage('habilities')" class="opcion" data-page="habilities">Habilidades</a>
+                <a @click="toScrollPage('experience')" class="opcion" data-page="experience">Experiencia</a>
+                <a @click="toScrollPage('contact-me')" class="opcion" data-page="contact-me">Contactame</a>
+
+                <div class="indicator"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -40,21 +43,21 @@
 
 }
 
+
+
 .navbar {
-    background-color: #191919;
+    backdrop-filter: blur(40px);
     position: fixed;
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
 }
 
 .logo {
-    /* border: 2px solid white; */
     font-size: 1.5rem;
-    /* margin-right: 20vw; */
 }
 
 .opciones {
@@ -93,4 +96,3 @@ function toScrollPage(a: string): void {
     document.querySelector(`.${a}`)?.scrollIntoView({ behavior: "smooth" });
 }
 </script>
-
