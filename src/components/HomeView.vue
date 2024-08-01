@@ -36,29 +36,37 @@
         </div>
     </div>
 
+    <div class="container_presentacion">
 
-    <div class="presentacion">
-        <p>Hola mi nombre es:</p>
-        <span class="nombre">
-            Sebastian Gonzalez Romero
-        </span>
-        <span class="predicado">& Soy Front-end Developer</span>
-
-        <div class="botones">
-            <a class="boton boton-principal" href="https://www.linkedin.com/in/sebastian-gonzalez-romero-5b4aa91b9/">
-                Mi perfil de linkedIn
-            </a>
-            <a class="boton boton-secundario" @click="showCV">
-                Ver mi CV
-            </a>
+        <div class="foto">
+            <img src="../assets/fondo_foto.svg" alt="" height="500">
         </div>
 
+        <div class="presentacion">
+            <p>Hola mi nombre es:</p>
+            <span class="nombre">
+                Sebastian Gonzalez Romero
+            </span>
+            <span class="predicado">& Soy Front-end Developer</span>
+
+            <div class="botones">
+                <a class="boton boton-principal" href="https://www.linkedin.com/in/sebastian-gonzalez-romero-5b4aa91b9/"
+                    title="LinkedIn">
+                    Mi perfil de linkedIn
+                </a>
+                <a class="boton boton-secundario" @click="showCV">
+                    Ver mi CV
+                </a>
+            </div>
+
+        </div>
     </div>
 </template>
 
 <style>
 @import '../assets/base.css';
 
+/* Fondo */
 .consola3 {
     position: absolute;
     top: 5rem;
@@ -84,19 +92,20 @@
 .bola {
     position: absolute;
     z-index: -1;
-    animation-name: movimientoBola;
-    animation-iteration-count: infinite;
+    animation: movimientoBola 5s infinite;
+    animation-direction: alternate;
+
 }
 
 @keyframes movimientoBola {
     from {
-        translate: 150vw 0;
-        scale: 200% 1;
+        translate: 0 50px;
+        /* scale: 200% 1; */
     }
 
     to {
         translate: 0 0;
-        scale: 100% 1;
+        /* scale: 100% 1; */
     }
 }
 
@@ -135,6 +144,14 @@
     left: 40rem;
 }
 
+/* Presentación */
+
+.container_presentacion {
+    display: flex;
+    /* border: white solid; */
+    width: 60vw;
+}
+
 .nombre {
     color: hsla(160, 100%, 37%, 1);
     display: block;
@@ -149,8 +166,12 @@
 }
 
 .presentacion {
-    margin-left: 30%;
-    width: 28%;
+    /* margin-left: 30%; */
+    width: 29vw;
+    /* border: orange solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .botones {

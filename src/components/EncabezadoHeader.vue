@@ -23,8 +23,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap');
 
 .opcion {
-    margin-right: 12px;
+    margin-right: 6px;
     font-size: 1rem;
+    
+}
+
+.opcion::before {
+    content: "$";
+    color: #00bd7e;
 }
 
 .logo::before {
@@ -38,7 +44,7 @@
 .indicator {
     position: absolute;
     z-index: -5;
-    background: rgba(93, 153, 98, 1);
+    background: #5d9962;
     height: 2px;
 
 }

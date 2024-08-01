@@ -2,6 +2,7 @@
 import { onMounted } from 'vue';
 import EncabezadoHeader from './components/EncabezadoHeader.vue';
 import HomeView from './components/HomeView.vue';
+import PresentationComponent from './components/PresentationComponent.vue';
 
 
 
@@ -31,6 +32,8 @@ onMounted(() => {
         left: coords?.left,
         right: coords?.right,
       };
+
+      console.log(entrada);
 
       if (entrada.isIntersecting) {
         // console.log(seccionActiva);
@@ -73,7 +76,7 @@ onMounted(() => {
     </section>
 
     <section ref="about-me" data-index="1" class="about-me">
-      ABOUT ME
+      <PresentationComponent></PresentationComponent>
     </section>
 
     <section ref="habilities" data-index="2" class="habilities">
