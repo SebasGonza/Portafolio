@@ -153,7 +153,7 @@
 }
 
 .nombre {
-    color: #00bd7e;
+    color: hsla(160, 100%, 37%, 1);
     display: block;
     font-family: Poppins, monospace;
     font-weight: 600;

@@ -105,7 +105,10 @@ section {
   justify-content: center;
   align-items: center;
   z-index: -1;
+  position: relative;
 }
+
+
 
 
 @media (min-width: 1024px) {

@@ -21,15 +21,60 @@ import { LogsComponent } from
                     <img src="../assets/sass-1.svg" alt="Html" />
                     <p>Vue</p>
                 </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+                <div class="logo">
+                    <img src="../assets/sass-1.svg" alt="Html" />
+                    <p>Vue</p>
+                </div>
+
+
+
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+.contenedor-principal {
+    height: 100%;
+    border: solid white;
+    /* position: absolute; */
+}
+
 .logo {
     width: 10vw;
-    height: 10vw;
+    height: 20vh;
     margin: 10px;
     display: flex;
     border-radius: 20px;
@@ -48,7 +93,6 @@ import { LogsComponent } from
     background: rgb(35, 171, 124);
     background: linear-gradient(99deg, rgba(35, 171, 124, 1) 10%, rgba(17, 105, 75, 1) 36%, rgba(26, 73, 56, 1) 65%, rgba(40, 40, 40, 1) 98%);
     transition: background 2s ease-out;
-
 
 }
 
@@ -69,6 +113,8 @@ import { LogsComponent } from
 .logos {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 </style>
 
