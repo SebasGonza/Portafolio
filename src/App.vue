@@ -105,7 +105,11 @@ section {
   justify-content: center;
   align-items: center;
   z-index: -1;
-  position: relative;
+  /* position: relative; */
+}
+
+header{
+  z-index: 1;
 }
 
 
@@ -128,4 +132,6 @@ section {
     flex-wrap: wrap;
   } */
 }
+
+
 </style>
