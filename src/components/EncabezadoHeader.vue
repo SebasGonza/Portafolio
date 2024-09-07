@@ -6,11 +6,11 @@
                 Sebastian
             </div>
             <div class="opciones">
-                <a @click="toScrollPage('home')" class="opcion" data-page="home">Home</a>
-                <a @click="toScrollPage('about-me')" class="opcion" data-page="about-me">Sobre mi</a>
-                <a @click="toScrollPage('habilities')" class="opcion" data-page="habilities">Habilidades</a>
-                <a @click="toScrollPage('experience')" class="opcion" data-page="experience">Experiencia</a>
-                <a @click="toScrollPage('contact-me')" class="opcion" data-page="contact-me">Contactame</a>
+                <a @click="toScrollPage('home')" class="opcion opcion1" data-page="home">Home</a>
+                <a @click="toScrollPage('about-me')" class="opcion opcion2" data-page="about-me">Sobre mi</a>
+                <a @click="toScrollPage('habilities')" class="opcion opcion3" data-page="habilities">Habilidades</a>
+                <a @click="toScrollPage('experience')" class="opcion opcion4" data-page="experience">Experiencia</a>
+                <a @click="toScrollPage('contact-me')" class="opcion opcion5" data-page="contact-me">Contactame</a>
 
                 <div class="indicator"></div>
             </div>
@@ -25,7 +25,6 @@
 .opcion {
     margin-right: 6px;
     font-size: 1rem;
-    
 }
 
 .opcion::before {

@@ -3,8 +3,7 @@ import { onMounted } from 'vue';
 import EncabezadoHeader from './components/EncabezadoHeader.vue';
 import HomeView from './components/HomeView.vue';
 import PresentationComponent from './components/PresentationComponent.vue';
-
-
+import HabilitiesComponent from './components/HabilitiesComponent.vue';
 
 
 onMounted(() => {
@@ -36,8 +35,9 @@ onMounted(() => {
       console.log(entrada);
 
       if (entrada.isIntersecting) {
-        // console.log(seccionActiva);
-        // console.log(indicador);
+
+        seccionActiva?.style.setProperty('color', '#FAFAFA');
+
         indicador?.style.setProperty(
           'left', `${directs.left}px`
         );
@@ -51,6 +51,9 @@ onMounted(() => {
           'width', `${directs.width}px`
         );
 
+      }
+      else {
+        seccionActiva?.style.setProperty('color', 'rgba(235, 235, 235, 0.64)');
       }
 
     })
@@ -80,7 +83,7 @@ onMounted(() => {
     </section>
 
     <section ref="habilities" data-index="2" class="habilities">
-      HABILITIES
+      <HabilitiesComponent></HabilitiesComponent>
     </section>
 
     <section ref="experience" data-index="3" class="experience">
@@ -92,6 +95,7 @@ onMounted(() => {
     </section>
 
   </main>
+  <footer></footer>
 </template>
 
 <style scoped>

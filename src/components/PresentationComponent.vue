@@ -1,16 +1,16 @@
 <template>
-   <div class="Uahh">
-      Sobre mi
+   <div class="contenedor-principal">
+      <div class="titulo">
+         <h1>#acerca-De-Mi</h1>
+      </div>
    </div>
 </template>
 
 
 <style scoped>
-/* .Uahh {
-   border: solid white;
-   width: 100vw;
-   height: 100vh;
-} */
+.titulo {
+   border: white solid;
+}
 </style>
 
 <script setup lang="ts"></script>
